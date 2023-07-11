@@ -49,11 +49,11 @@
         
         while (counterNum <= 10) {
             count.innerHTML += counterNum + '<br />';
-            sum = sum + counterNum;
+            sum += counterNum;
             counterNum++;
            
         }
-        count.innerHTML += 'Total: ' + sum;
+        count.innerHTML += 'Total: ' + sum + '<br />';
 
 
 
@@ -69,9 +69,14 @@
         Use innerHTML and the line break tag <br /> when showing each calculation.
         The while condition should set to repeat up to 10. */
 
+        const multiply = document.querySelector('#multiply');
+        let counterProd = 1;
+        let baseNum = 3;
 
-
-
+        do {
+            multiply.innerHTML += `${baseNum} * ${counterProd} = ${baseNum * counterProd} <br />`;
+            counterProd++;
+        } while (counterProd <= 10);
 
 
 
@@ -80,14 +85,31 @@
         Create a for loop that repeats the line: "I will not stick my chewing gum under my desk." 100 times.
         1. Select the naughty p tag and assign it a variable
         2. Create a for loop that repeats the line 100 times and show it on the page. Try including the iterationa variable so that your lines are numbered. */
+
+        
         /* Exercise 5
         3. Practice the continue statement by stating "My hand is tired" at line 50 in the for loop. 
         Use a conditional statement to check the value of your iteration variable, then insert the text and continue. */
+        
+        
         /* Exercise 6
         4. Practice the break statement by stopping the for loop at line 75. 
-         Use a conditional statement to check the value of your iteration variable, then insert the text "I couldn't finish" and break.*/
-
-
+        Use a conditional statement to check the value of your iteration variable, then insert the text "I couldn't finish" and break.*/
+        
+        
+        const naughty = document.querySelector('#naughty');
+        for (let i = 0; i < 100; i++){
+            if (i === 50){
+                naughty.innerHTML += "My hand is tired <br />";
+                continue;
+            }
+            if (i === 75){
+                naughty.innerHTML += "I couldn't finish! <br />"
+                break;
+            }
+            naughty.innerHTML += `${i}. I will not stick my chewing gum under my desk. <br />`;
+        }
+        
 
 
 
